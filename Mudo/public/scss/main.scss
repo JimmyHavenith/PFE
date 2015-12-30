@@ -1,0 +1,428 @@
+@import "colors_elements";
+@import "fonts_variables";
+
+body{
+  background-color: $color_body;
+  font: $font_base;
+  color: $color_fontsBase;
+  margin: 0 auto;
+  a{
+    color: $color_fontsBase;
+    text-decoration: none;
+  }
+}
+header{
+  position: relative;
+}
+#menu{
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  background-color: black;
+  opacity: 0.8;
+  padding-bottom: 30px;
+  h1{
+    font-family: $font_title;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: -37px;
+  }
+  .findFilm a, .disconnect a{
+    margin: 25px;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.4em;
+    font-family: $font_base;
+  }
+  .findFilm a{
+    background-color: $color_rougeDark;
+  }
+  .findFilm a:hover{
+    background-color: $color_rouge;
+  }
+  .disconnect a:hover{
+    color: $color_rouge;
+  }
+}
+#latest{
+  width: 100%;
+  img{
+    width: 100%;
+  }
+}
+#slogan{
+  margin-bottom: 35px;
+  p{
+    font-family: $font_slogan;
+    text-align: center;
+    font-size: 2.8em;
+    line-height: 0.4em;
+  }
+  img{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 20%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+#toDoQuiz{
+  width: 100%;
+  background-image: url("../img/listeFilm.png");
+  background-size: cover;
+  height: 475px;
+  p{
+    text-align: center;
+    padding-top: 215px;
+  }
+  a{
+    background-color: $color_rougeDark;
+    font-size: 1.8em;
+    font-family: $font_base;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 6px;
+  }
+  a:hover{
+    background-color: $color_rouge;
+  }
+}
+footer{
+  text-align: center;
+  font-family: $font-base;
+}
+
+// connect
+
+article{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  .background-image-connect{
+    background-image: url('../img/oldboy.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .background-image-register{
+    background-image: url('../img/chappie.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .background-image-sure{
+    background-image: url('../img/matrix.png');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+  }
+  .name-logo{
+    position: absolute;
+    h1{
+      margin: 100px;
+    }
+    a{
+      color: $color_rougeDark;
+      font-size: 5em;
+      font-family: $font_title;
+      text-shadow: 2px 2px 1px black;
+    }
+  }
+  .citation{
+    margin-top: -100px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+    background-color: black;
+    border-radius: 5px;
+    opacity: 0.8;
+    blockquote{
+      font-family: $font_base;
+      font-size: 1.5em;
+      margin: 20px 330px 30px;
+      padding: 20px;
+      font-style: italic;
+    }
+    h2 a{
+      color: white;
+      font-family: $font_slogan;
+      border-top: 1px solid red;
+      border-bottom: 1px solid red;
+      padding: 5px;
+    }
+    h2 a:hover{
+      color: $color_rouge;
+    }
+  }
+  .formulaire{
+    background-color: black;
+    border-radius: 6px;
+    opacity: 0.8;
+    color: white;
+    font-family: $font_base;
+    position: absolute;
+    top: 30%;
+    left: 37%;
+    padding: 30px;
+    h2{
+      text-align: center;
+      text-transform: uppercase;
+    }
+    p{
+      color: $color_rougeDark;
+      text-align: center;
+      border-top: 1px solid $color_rougeDark;
+      border-bottom: 1px solid $color_rougeDark;
+      padding: 5px;
+    }
+    .login, .register{
+      margin-top: 30px;
+      div{
+        margin-top: 15px;
+      }
+      label{
+        display: block;
+      }
+      input[type="password"], input[type="email"], input[type="text"]{
+        background-color: black;
+        width: 97%;
+        color: white;
+        padding: 5px;
+      }
+      button[type="submit"]{
+        background-color: $color_rougeDark;
+        border: none;
+        border-radius: 6px;
+        display: block;
+        margin: 0 auto;
+        font-size: 1.2em;
+        color: white;
+        padding: 5 10 5 10;
+        margin-top: 25px;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover{
+        background-color: $color_rouge;
+      }
+      p{
+        text-align: center;
+        border: none;
+      }
+      a{
+        color: white;
+      }
+      a:hover{
+        color: $color_rougeDark;
+      }
+    }
+  }
+}
+
+// PAGES QUIZZ
+section:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+#menuQuiz{
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  h1{
+    font-family: $font_title;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: -37px;
+  }
+  h2{
+    text-align: center;
+    margin-top: 125px;
+    font-family: $font_slogan;
+    font-size: 2.8em;
+  }
+  .findFilm a, .disconnect a{
+    margin: 25px;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.4em;
+    font-family: $font_base;
+  }
+  .findFilm a{
+    background-color: $color_rougeDark;
+  }
+  .findFilm a:hover{
+    background-color: $color_rouge;
+  }
+  .disconnect a:hover{
+    color: $color_rouge;
+  }
+  .yesorno{
+    padding-top: 30px;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+  }
+  .yes, .no{
+    display: inline-block;
+    margin: 0 auto;
+    width: 49%;
+    opacity: 1;
+    a{
+      font-size: 8em;
+      display: block;
+      margin: 0 auto;
+      width: 148px;
+      text-indent: -5000px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 0;
+    }
+  }
+  .yes a{
+    background-image: url("../img/yes.svg");
+  }
+  .no a{
+    background-image: url("../img/no.svg");
+  }
+  .yes a:hover, .no a:hover{
+    background-position: -148 0;
+  }
+}
+section .movies {
+  display: block;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  float: left;
+}
+section .movies img{
+  width: 197.85px;
+  height: 260px;
+  float: left;
+  transition: all 1.5 ease 0s;
+}
+section .movieLink {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+}
+section .movies h2 {
+  padding: 5px;
+  background-color: black;
+  color: $color_rouge;
+  display: block;
+  font-size: 1.2em;
+  left: 0;
+  opacity: 0;
+  padding-top: 125px;
+  position: absolute;
+  text-align: center;
+  top: -50px;
+  bottom: -50px;
+  font-family: $font_slogan;
+}
+section .movies:hover h2 {
+  opacity: 0.9;
+  transition: all 0.2s ease-in-out 0s;
+  right: 0%;
+  z-index: 0;
+}
+section .loading{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h3{
+    text-align: center;
+    font-family: $font_base;
+  }
+    span{
+      font-size: 2em;
+    }
+}
+section .date{
+  color: white;
+  font-size: 0.8em;
+}
+
+// PAGE PLUG
+
+.markView{
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  width: 100%;
+  bottom: -299px;
+  p{
+    font-family: $font_base;
+    margin-left: 25px;
+  }
+}
+.contenu{
+  width: 100%;
+  margin-top: 50px;
+  section{
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+    img{
+      float: left;
+      width: 35%;
+    }
+    .infos{
+      float: right;
+      margin-top: -40px;
+      margin-left: 25px;
+      width: 55%;
+      h2{
+        padding-left: 15px;
+        margin-bottom: 0px;
+        font-size: 3em;
+        font-family: $font_slogan;
+      }
+      .dtg{
+        border-right: 2px solid white;
+      }
+      .synopsis{
+        font-size: 1.2em
+      }
+      p{
+        float: left;
+        padding-right: 15px;
+        padding-left: 15px;
+        font-family: $font_base;
+        text-align: justify;
+      }
+      a{
+        color: grey;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+    }
+  }
+  .fanArt{
+    padding: 80px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+  }
+  .trailer{
+    margin-bottom: 100px;
+    iframe{
+      width: 100%;
+      height: 350px;
+    }
+  }
+}
