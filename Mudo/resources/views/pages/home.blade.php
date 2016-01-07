@@ -10,7 +10,16 @@
       <div id="menu">
         <h1><a href="/acceuil">Müdo</a></h1>
         <div class="findFilm">
-          <?php if( isset($_SESSION['connected'] )) :?>
+          @if( Auth::check() )
+            <a href="{!! action('Auth\AuthController@getLogout') !!}">
+              se déconnecter
+            </a>
+          @else
+            <a href="{!! action('Auth\AuthController@getLogin') !!}">
+              se connecter
+            </a>
+          @endif
+          <!-- <?php if( isset($_SESSION['connected'] )) :?>
             <a href="{!! action('Auth\AuthController@getLogin') !!}">
               se déconnecter
             </a>
@@ -18,7 +27,7 @@
             <a href="{!! action('Auth\AuthController@getLogout') !!}">
               se connecter
             </a>
-          <?php endif; ?>
+          <?php endif; ?> -->
           <!-- <a href="{!! action('Auth\AuthController@getLogin') !!}">Trouver mon film</a> -->
         </div>
         <div class="search">
@@ -39,15 +48,15 @@
     <section>
       <div id="toDoQuiz">
         <p>
-          <?php if( isset($_SESSION['connected'] )) :?>
-            <a href="{!! action('Auth\AuthController@getLogin') !!}">
-              Trouver mon film
-            </a>
-          <?php else :?>
+          @if( Auth::check() )
             <a href="/quiz">
               Trouver mon film
             </a>
-          <?php endif; ?>
+          @else
+            <a href="{!! action('Auth\AuthController@getLogin') !!}">
+              Trouver mon film
+            </a>
+          @endif
         </p>
       </div>
     </section>

@@ -23,7 +23,7 @@
 						<a href="/question3/{{ $tag }}">yes</a>
 					</div>
 					<div class="no">
-						<a href="/question2/{{ $tag }}">no</a>
+						<a href="">no<input type="button" onclick='window.location.reload(false)' value="Rafraichir"/></a>
 					</div>
 				</div>
       </div>
@@ -37,7 +37,7 @@
 					<a href="/movies/<?php echo $value['id']; ?>" class="movieLink"></a>
 					<img src="https://image.tmdb.org/t/p/w780/<?php echo($value['poster_path']); ?>" alt="" />
 					<h2>
-						<p><?php echo($value['original_title']); ?></p>
+						<p><?php echo($value['title']); ?></p>
 						<p class="date"><?php echo($value['release_date']); ?></p>
 					</h2>
 				</div>

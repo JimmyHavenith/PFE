@@ -25,6 +25,7 @@ Route::get('person/{id}', 'PersonController@show');
 
 Route::get('question', 'QuestionController@index');
 Route::get('question2/{tag}', 'QuestionController@show');
+Route::get('question2', 'QuestionController@nothing');
 Route::get('question3/{tag}', 'QuestionController@showDeux');
 Route::get('question4/{tag}', 'QuestionController@showTrois');
 

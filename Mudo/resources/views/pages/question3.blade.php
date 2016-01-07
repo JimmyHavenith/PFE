@@ -22,9 +22,9 @@
           <div class="yes">
             <a href="/question4/{{ $tag }}">yes</a>
           </div>
-          <div class="no">
-            <a href="#">no</a>
-          </div>
+					<div class="no">
+						<a href="">no<input type="button" onclick='window.location.reload(false)' value="Rafraichir"/></a>
+					</div>
         </div>
       </div>
 			<div id="latest">

@@ -1,5 +1,5 @@
 body {
-  background-color: #1d1d1b;
+  background-color: #1f2025;
   font: "Helvetica";
   color: white;
   margin: 0 auto;
@@ -121,6 +121,7 @@ article .background-image-connect {
   background-size: cover;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 article .background-image-register {
@@ -128,6 +129,7 @@ article .background-image-register {
   background-size: cover;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 article .background-image-sure {
@@ -189,10 +191,10 @@ article .formulaire {
   opacity: 0.8;
   color: white;
   font-family: "Helvetica";
-  position: absolute;
-  top: 30%;
-  left: 37%;
   padding: 30px;
+  width: 365px;
+  margin: 0 auto;
+  margin-top: 150px;
 }
 
 article .formulaire h2 {
@@ -206,6 +208,11 @@ article .formulaire p {
   border-top: 1px solid #ce1919;
   border-bottom: 1px solid #ce1919;
   padding: 5px;
+}
+
+article .formulaire .error {
+  padding: 0px;
+  font-size: 0.8em;
 }
 
 article .formulaire .login, article .formulaire .register {
@@ -411,40 +418,86 @@ section .date {
   font-size: 0.8em;
 }
 
-.markView {
-  background-color: black;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-  bottom: -299px;
-}
-
-.markView p {
-  font-family: "Helvetica";
-  margin-left: 25px;
-}
-
 .contenu {
   width: 100%;
   margin-top: 50px;
 }
 
 .contenu section {
-  width: 60%;
+  width: 65%;
   display: block;
   margin: 0 auto;
 }
 
 .contenu section img {
   float: left;
+  width: 40%;
+  border-radius: 8px;
+}
+
+.contenu section .features {
+  padding-bottom: 25px;
+}
+
+.contenu section .features .continueQuiz {
+  display: inline-block;
+  width: 64%;
+}
+
+.contenu section .features .continueQuiz input {
+  color: white;
+  background-color: #ce1919;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+  font-family: "Mohave";
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contenu section .features .features_features {
+  display: inline-block;
   width: 35%;
+}
+
+.contenu section .features .features_features li {
+  float: left;
+  list-style-type: none;
+  margin-right: 15px;
+}
+
+.contenu section .features .features_features li a {
+  font-family: "Helvetica";
+}
+
+.contenu section .features .features_features li a:hover {
+  color: #ce1919;
+  text-decoration: underline;
+}
+
+.contenu section .features .features_features .wishlist {
+  background-image: url("../img/pop5.svg");
+  background-repeat: no-repeat;
+  background-position: 0em;
+  padding-left: 20px;
+}
+
+.contenu section .features .features_features .mview {
+  background-image: url("../img/eye.svg");
+  background-repeat: no-repeat;
+  background-position: 0em;
+  padding-left: 28px;
+  border-right: 1px solid white;
+  padding-right: 15px;
 }
 
 .contenu section .infos {
   float: right;
-  margin-top: -40px;
   margin-left: 25px;
   width: 55%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
 }
 
 .contenu section .infos h2 {
@@ -452,18 +505,26 @@ section .date {
   margin-bottom: 0px;
   font-size: 3em;
   font-family: "Mohave";
+  color: #ce1919;
 }
 
 .contenu section .infos .dtg {
   border-right: 2px solid white;
+  float: left;
 }
 
-.contenu section .infos .synopsis {
-  font-size: 1.2em;
+.contenu section .infos .infos_infos:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.contenu section .infos .infosSup {
+  float: none;
+  display: block;
 }
 
 .contenu section .infos p {
-  float: left;
   padding-right: 15px;
   padding-left: 15px;
   font-family: "Helvetica";
@@ -478,6 +539,29 @@ section .date {
   text-decoration: underline;
 }
 
+.contenu section .infos .cast {
+  width: 100%;
+}
+
+.contenu .overview {
+  font-size: 1.3em;
+  font-family: "Helvetica";
+  margin-top: 50px;
+}
+
+.contenu .tags {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.contenu .tags p {
+  font-family: "Helvetica";
+}
+
+.contenu .tags .tags_tags {
+  color: grey;
+}
+
 .contenu .fanArt {
   padding: 80px;
   margin-top: 25px;
@@ -487,7 +571,10 @@ section .date {
 }
 
 .contenu .trailer {
+  margin-top: 70px;
   margin-bottom: 100px;
+  padding-bottom: 100px;
+  border-bottom: 2px solid white;
 }
 
 .contenu .trailer iframe {

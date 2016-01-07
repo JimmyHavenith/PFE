@@ -2,7 +2,7 @@
 @import "fonts_variables";
 
 body{
-  background-color: $color_body;
+  background-color: #1f2025;
   font: $font_base;
   color: $color_fontsBase;
   margin: 0 auto;
@@ -106,12 +106,14 @@ article{
     background-size: cover;
     height: 100%;
     width: 100%;
+    position: absolute;
   }
   .background-image-register{
     background-image: url('../img/chappie.png');
     background-size: cover;
     height: 100%;
     width: 100%;
+    position: absolute;
   }
   .background-image-sure{
     background-image: url('../img/matrix.png');
@@ -164,10 +166,10 @@ article{
     opacity: 0.8;
     color: white;
     font-family: $font_base;
-    position: absolute;
-    top: 30%;
-    left: 37%;
     padding: 30px;
+    width: 365px;
+    margin: 0 auto;
+    margin-top: 150px;
     h2{
       text-align: center;
       text-transform: uppercase;
@@ -178,6 +180,10 @@ article{
       border-top: 1px solid $color_rougeDark;
       border-bottom: 1px solid $color_rougeDark;
       padding: 5px;
+    }
+    .error{
+      padding: 0px;
+      font-size: 0.8em;
     }
     .login, .register{
       margin-top: 30px;
@@ -357,47 +363,94 @@ section .date{
 
 // PAGE PLUG
 
-.markView{
-  background-color: black;
-  opacity: 0.8;
-  position: absolute;
-  width: 100%;
-  bottom: -299px;
-  p{
-    font-family: $font_base;
-    margin-left: 25px;
-  }
-}
 .contenu{
   width: 100%;
   margin-top: 50px;
   section{
-    width: 60%;
+    width: 65%;
     display: block;
     margin: 0 auto;
     img{
       float: left;
-      width: 35%;
+      width: 40%;
+      border-radius: 8px;
+    }
+    .features{
+      padding-bottom: 25px;
+      .continueQuiz{
+        display: inline-block;
+        width: 64%;
+        input{
+          color: white;
+          background-color: $color_rougeDark;
+          padding: 8px;
+          border: none;
+          border-radius: 6px;
+          text-transform: uppercase;
+          font-family: $font_slogan;
+          font-size: 1em;
+          cursor: pointer;
+        }
+      }
+      .features_features{
+        display: inline-block;
+        width: 35%;
+        li{
+          float: left;
+          list-style-type: none;
+          margin-right: 15px;
+          a{
+            font-family: $font_base;
+          }
+          a:hover{
+            color: $color_rougeDark;
+            text-decoration: underline;
+          }
+        }
+        .wishlist{
+          background-image: url('../img/pop5.svg');
+          background-repeat: no-repeat;
+          background-position: 0em;
+          padding-left: 20px;
+        }
+        .mview{
+          background-image: url('../img/eye.svg');
+          background-repeat: no-repeat;
+          background-position: 0em;
+          padding-left: 28px;
+          border-right: 1px solid white;
+          padding-right: 15px;
+        }
+      }
     }
     .infos{
       float: right;
-      margin-top: -40px;
+      // margin-top: -40px;
       margin-left: 25px;
       width: 55%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
       h2{
         padding-left: 15px;
         margin-bottom: 0px;
         font-size: 3em;
         font-family: $font_slogan;
+        color: $color_rougeDark;
       }
       .dtg{
         border-right: 2px solid white;
+        float: left;
       }
-      .synopsis{
-        font-size: 1.2em
+      .infos_infos:after{
+        content: '';
+        display: block;
+        clear: both;
+      }
+      .infosSup{
+        float: none;
+        display: block;
       }
       p{
-        float: left;
         padding-right: 15px;
         padding-left: 15px;
         font-family: $font_base;
@@ -409,6 +462,24 @@ section .date{
       a:hover{
         text-decoration: underline;
       }
+      .cast{
+        width: 100%;
+      }
+    }
+  }
+  .overview{
+    font-size: 1.3em;
+    font-family: $font_base;
+    margin-top: 50px;
+  }
+  .tags{
+    margin-top: 50px;
+    margin-bottom: 70px;
+    p{
+      font-family: $font-base;
+    }
+    .tags_tags{
+      color: grey;
     }
   }
   .fanArt{
@@ -419,7 +490,10 @@ section .date{
     border-bottom: 2px solid white;
   }
   .trailer{
+    margin-top: 70px;
     margin-bottom: 100px;
+    padding-bottom: 100px;
+    border-bottom: 2px solid white;
     iframe{
       width: 100%;
       height: 350px;

@@ -38,6 +38,7 @@
             <div>
               <button type="submit">Register</button>
             </div>
+            @include('errors.userErrors')
           </form>
         </div>
       </section>

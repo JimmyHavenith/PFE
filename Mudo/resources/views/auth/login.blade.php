@@ -38,6 +38,7 @@
                 <a href="{!! action('Auth\AuthController@getRegister') !!}">Pas encore inscrit ?</a>
               </p>
             </div>
+            @include('errors.userErrors')
           </form>
         </div>
       </section>
