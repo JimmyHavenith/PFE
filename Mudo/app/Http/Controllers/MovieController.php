@@ -15,6 +15,7 @@ class MovieController extends Controller
       $client = new \Tmdb\Client($token, ['secure' => false]);
       $movie = $client->getMoviesApi()->getMovie($id, array('language' => 'fr'));
       $credits = $client->getMoviesApi()->getCredits($id);
+      $images = $client->getMoviesApi()->getImages($id);
       $response = $client->getDiscoverApi()->discoverMovies([
           'page' => 1,
           'language' => 'fr',
@@ -23,9 +24,9 @@ class MovieController extends Controller
       return view('pages/movie', [
           'movie' => $movie,
           'credits' => $credits,
+          'images' => $images,
           'response' => $response,
           'trailers' => $trailers,
       ]);
     }
-
 }

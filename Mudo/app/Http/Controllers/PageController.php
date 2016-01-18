@@ -11,75 +11,40 @@ use Carbon\Carbon;
 class PageController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth', ['only'=>['quiz']]);
-    }
-
-    public function home(){
-    	return view('pages/home'); 
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth', ['only'=>['quiz']]);
+    // }
 
     public function quiz()
     {
-        return view('pages/quiz');   
+        return view('pages/quiz');
     }
 
-    public function movies()
-    {
-        return view('pages/movies');
+    public function latest(){
+      $token  = new \Tmdb\ApiToken('579fa093874ff0018a90f6279b579e86');
+      $client = new \Tmdb\Client($token, ['secure' => false]);
+      $popularity = $client->getDiscoverApi()->discoverMovies([
+        'page' => 1,
+        'language' => 'fr',
+        'sort_by' => 'popularity.desc',
+        'release_date.gte' => '2015-01-01',
+      ]);
+      $vote = $client->getDiscoverApi()->discoverMovies([
+        'page' => 1,
+        'language' => 'fr',
+        'sort_by' => 'vote_count.desc',
+      ]);
+      $cinema = $client->getDiscoverApi()->discoverMovies([
+        'page' => 1,
+        'language' => 'fr',
+        'primary_release_date.gte' =>'2015-12-15',
+        'primary_release_date.lte' => '2016-02-01',
+      ]);
+      return view('pages/home', [
+          'popularity' => $popularity,
+          'vote' => $vote,
+          'cinema' => $cinema,
+      ]);
     }
-
-    public function sheet()
-    {
-        return view('pages/sheet');
-    }
-    public function celebrity()
-    {
-        return view('pages/celebrity');
-    }
-
-    public function qOne()
-    {
-        return view('pages/questionOne');   
-    }
-    public function qTwo()
-    {
-        return view('pages/questionTwo');   
-    }
-    public function qThree()
-    {
-        return view('pages/questionThree');   
-    }
-    public function qFour()
-    {
-        return view('pages/questionFour');   
-    }
-    public function qFive()
-    {
-        return view('pages/questionFive');   
-    }
-    public function qSix()
-    {
-        return view('pages/questionSix');   
-    }
-    public function qSeven()
-    {
-        return view('pages/questionSeven');   
-    }
-    public function qEight()
-    {
-        return view('pages/questionEight');   
-    }
-    public function qNine()
-    {
-        return view('pages/questionNine');   
-    }
-    public function qTen()
-    {
-        return view('pages/questionTen');   
-    }
-
-
-
 }

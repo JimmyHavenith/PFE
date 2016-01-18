@@ -10,12 +10,12 @@
       <section class="background-image-register">
         <div class="name-logo">
           <h1>
-            <a href="/acceuil">Müdo</a>
+            <a href="/accueil" title="Retourner à la page d'accueil">Müdo</a>
           </h1>
         </div>
         <div class="formulaire">
           <h2>Inscription</h2>
-          <p>Rejoins le monde merveilleux du septième art</p>
+          <p>En t'inscrivant, tu peux rajouter des films à ta watchlist, utiliser l'option découverte et beaucoup d'autres choses, rejoins-nous !</p>
           <form method="POST" class="register" action="/auth/register">
             {!! csrf_field() !!}
 

@@ -11,12 +11,12 @@
       <section class="background-image-connect">
         <div class="name-logo">
           <h1>
-            <a href="/acceuil">Müdo</a>
+            <a href="/accueil" title="Retourner à la page d'accueil">Müdo</a>
           </h1>
         </div>
         <div class="formulaire">
           <h2>Connexion</h2>
-          <p>Prêt à faire de grandes découvertes ? C'est parti !</p>
+          <p>Inscris toi si ce n'est pas déjà fais pour découvrir toutes les nouvelles possibilités qui s'offrent à toi !</p>
           <form method="POST" class="register" action="/auth/login">
             {!! csrf_field() !!}
             <div>

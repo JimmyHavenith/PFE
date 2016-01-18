@@ -1,0 +1,180 @@
+// PAGES QUIZ
+section:after{
+  clear: both;
+  display: block;
+  content: "";
+}
+#menuQuiz{
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  height: 100%;
+  h1{
+    font-family: $font_title;
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: -37px;
+  }
+  .disconnect a{
+    margin: 25px;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 1.4em;
+    font-family: $font_base;
+  }
+  .disconnect a:hover{
+    color: $color_rouge;
+  }
+}
+.quiz-page{
+  width: 100%;
+  display: block;
+}
+.quiz-yesorno{
+  padding-top: 75px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  h2{
+    text-align: center;
+    margin-top: 125px;
+    font-family: $font_slogan;
+    font-size: 2.8em;
+  }
+  .resultats{
+    text-align: center;
+    margin-top: 200px;
+    font-family: $font_slogan;
+    font-size: 2.8em;
+  }
+}
+.toDoQuiz2{
+  width: 100%;
+  position: absolute;
+  p{
+    text-align: center;
+    padding-top: 15px;
+  }
+}
+.quiz-link2{
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  background-color: $color_rougeDark;
+  font-size: 1.4em;
+  font-family: $font_base;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  .quiz-link__text2{
+    position: relative;
+    z-index: 2;
+  }
+}
+.quiz-link__bg2{
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 150%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 150%;
+  transform: rotate(-25deg);
+  transition: all 0.3s ease 0s;
+  z-index: 1;
+}
+.quiz-link2:hover .quiz-link__bg2{
+  bottom: -160%;
+  left: -40%;
+  right: -40%;
+  top: -160%;
+  transition: all 0.5s ease 0s;
+}
+.yesorno{
+  .yes a{
+    background-image: url("../img/yes.svg");
+  }
+  .no a{
+    background-image: url("../img/no.svg");
+  }
+  .yes, .no{
+    display: inline-block;
+    margin: 0 auto;
+    width: 49.8%;
+    a{
+      font-size: 8em;
+      display: block;
+      margin: 0 auto;
+      width: 148px;
+      text-indent: -5000px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0px 0px;
+    }
+    a:hover{
+      background-position: -148px 0px;
+    }
+  }
+}
+section .movies {
+  display: block;
+  float: left;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+section .movies img{
+  width: 158.2px;
+  height: 215px;
+  float: left;
+  transition: all 1.5 ease 0s;
+}
+section .movieLink {
+  bottom: 0;
+  display: block;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 500;
+}
+section .movies h2 {
+  padding: 5px;
+  background-color: black;
+  color: $color_rouge;
+  display: block;
+  font-size: 1.1em;
+  left: 0;
+  opacity: 0;
+  padding-top: 100px;
+  position: absolute;
+  text-align: center;
+  top: -50px;
+  bottom: -50px;
+  font-family: $font_base;
+}
+section .movies:hover h2 {
+  opacity: 0.9;
+  transition: all 0.2s ease-in-out 0s;
+  right: 0%;
+  z-index: 0;
+}
+section .loading{
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  h3{
+    text-align: center;
+    font-family: $font_base;
+  }
+    span{
+      font-size: 2em;
+    }
+}
+section .date{
+  color: white;
+  font-size: 0.9em;
+}
