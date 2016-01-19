@@ -11,7 +11,7 @@ class MovieController extends Controller
 
     public function show($id)
     {
-      $token  = new \Tmdb\ApiToken('579fa093874ff0018a90f6279b579e86');
+      $token  = new \Tmdb\ApiToken('API_KEY');
       $client = new \Tmdb\Client($token, ['secure' => false]);
       $movie = $client->getMoviesApi()->getMovie($id, array('language' => 'fr'));
       $credits = $client->getMoviesApi()->getCredits($id);

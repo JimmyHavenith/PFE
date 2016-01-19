@@ -46,7 +46,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">
-                    <a href="acceuil">Jimmy Havenith - PFE</a>
+                    <a href="accueil">Jimmy Havenith - PFE</a>
                 </div>
             </div>
         </div>

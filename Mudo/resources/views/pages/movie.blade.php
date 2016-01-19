@@ -85,7 +85,7 @@
           <div id="galerie">
             <div class="slider">
                 @foreach($images['backdrops'] as $key => $image)
-                  <a href="#" class="thumbnail" alt="la mer">
+                  <a href="#" class="thumbnail" target="_self" onclick="window.open('https://image.tmdb.org/t/p/w780/{{ $image['file_path'] }}'); return true;" alt="la mer">
                     <img data-img="https://image.tmdb.org/t/p/w780/{{ $image['file_path'] }}" src="https://image.tmdb.org/t/p/w780/{{ $image['file_path'] }}" alt="image du film {{ $movie['title'] }}" title="{{ $movie['title'] }}">
                   </a>
                 @endforeach

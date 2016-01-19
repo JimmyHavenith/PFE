@@ -23,7 +23,7 @@ class QuestionController extends Controller
     }
     public function show($tag)
     {
-        $token  = new \Tmdb\ApiToken('579fa093874ff0018a90f6279b579e86');
+        $token  = new \Tmdb\ApiToken('API_KEY');
         $client = new \Tmdb\Client($token, ['secure' => false]);
         $questions = Question::orderByRaw('RAND()')->take(1)->get();
         session(['ids'=>$tag]); // on stock l'id dans le tag
@@ -42,7 +42,7 @@ class QuestionController extends Controller
         $ids = session('ids'); // on récupère l'id
         $ids.='|'.$tag;
         session(['ids'=>$ids]); // on stock l'id
-        $token  = new \Tmdb\ApiToken('579fa093874ff0018a90f6279b579e86');
+        $token  = new \Tmdb\ApiToken('API_KEY');
         $client = new \Tmdb\Client($token, ['secure' => false]);
         $questions = Question::orderByRaw('RAND()')->take(1)->get();
         $response = $client->getDiscoverApi()->discoverMovies([
@@ -61,7 +61,7 @@ class QuestionController extends Controller
       $idss = session('ids');
       $idss.='|'.$tag.'|'.$ids;
       session(['ids'=>$idss]);
-      $token  = new \Tmdb\ApiToken('579fa093874ff0018a90f6279b579e86');
+      $token  = new \Tmdb\ApiToken('API_KEY');
       $client = new \Tmdb\Client($token, ['secure' => false]);
       $questions = Question::orderByRaw('RAND()')->take(1)->get();
       $response = $client->getDiscoverApi()->discoverMovies([
